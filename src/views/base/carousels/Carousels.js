@@ -34,7 +34,7 @@ const Carousels = () => {
           <CCardBody>
             <CCarousel>
               <CCarouselInner>
-                <CCarouselItem>
+                {/* <CCarouselItem>
                   <img className="d-block w-100" src={slides[0]} alt="slide 1"/>
                 </CCarouselItem>
                 <CCarouselItem>
@@ -42,7 +42,7 @@ const Carousels = () => {
                 </CCarouselItem>
                 <CCarouselItem>
                   <img className="d-block w-100" src={slides[2]} alt="slide 3"/>
-                </CCarouselItem>
+                </CCarouselItem> */}
               </CCarouselInner>
               <CCarouselControl direction="prev"/>
               <CCarouselControl direction="next"/>
@@ -59,7 +59,7 @@ const Carousels = () => {
             <CCarousel activeIndex={activeIndex}>
               <CCarouselIndicators/>
               <CCarouselInner>
-                <CCarouselItem>
+                {/* <CCarouselItem>
                   <img className="d-block w-100" src={slides[0]} alt="slide 1"/>
                   <CCarouselCaption><h3>Slide 1</h3><p>Slide 1</p></CCarouselCaption>
                 </CCarouselItem>
@@ -70,7 +70,7 @@ const Carousels = () => {
                 <CCarouselItem>
                   <img className="d-block w-100" src={slides[2]} alt="slide 3"/>
                   <CCarouselCaption><h3>Slide 3</h3><p>Slide 3</p></CCarouselCaption>
-                </CCarouselItem>
+                </CCarouselItem> */}
               </CCarouselInner>
               <CCarouselControl direction="prev"/>
               <CCarouselControl direction="next"/>
@@ -87,7 +87,7 @@ const Carousels = () => {
             <CCarousel animate>
               <CCarouselIndicators/>
               <CCarouselInner>
-                <CCarouselItem>
+                {/* <CCarouselItem>
                   <img className="d-block w-100" src={slides[0]} alt="slide 1"/>
                   <CCarouselCaption><h3>Slide 1</h3><p>Slide 1</p></CCarouselCaption>
                 </CCarouselItem>
@@ -98,7 +98,7 @@ const Carousels = () => {
                 <CCarouselItem>
                   <img className="d-block w-100" src={slides[2]} alt="slide 3"/>
                   <CCarouselCaption><h3>Slide 3</h3><p>Slide 3</p></CCarouselCaption>
-                </CCarouselItem>
+                </CCarouselItem> */}
               </CCarouselInner>
               <CCarouselControl direction="prev"/>
               <CCarouselControl direction="next"/>
@@ -115,7 +115,7 @@ const Carousels = () => {
             <CCarousel animate autoSlide={3000}>
               <CCarouselIndicators/>
               <CCarouselInner>
-                <CCarouselItem>
+                {/* <CCarouselItem>
                   <img className="d-block w-100" src={slides[0]} alt="slide 1"/>
                   <CCarouselCaption><h3>Slide 1</h3><p>Slide 1</p></CCarouselCaption>
                 </CCarouselItem>
@@ -126,7 +126,7 @@ const Carousels = () => {
                 <CCarouselItem>
                   <img className="d-block w-100" src={slides[2]} alt="slide 3"/>
                   <CCarouselCaption><h3>Slide 3</h3><p>Slide 3</p></CCarouselCaption>
-                </CCarouselItem>
+                </CCarouselItem> */}
               </CCarouselInner>
               <CCarouselControl direction="prev"/>
               <CCarouselControl direction="next"/>

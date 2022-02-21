@@ -1,12 +1,12 @@
 import React from 'react';
 
 //Custom Components
-const Transfert = React.lazy(() => import('./views/transfert/Transfert'));
-const TransfertMultiple = React.lazy(() => import('./views/transfert/TransfertMultiple'))
+const NewAgence = React.lazy(() => import('./views/transfert/CreateAgence'));
+const AllAgences = React.lazy(() => import('./views/transfert/AllAgences'))
 const Historique = React.lazy(() => import('./views/historique/Historique'))
 
-const NewClient = React.lazy(() => import('./views/clients/CreateClient'));
-const AllClients = React.lazy(() => import('./views/clients/AllClients'));
+const NewAgent = React.lazy(() => import('./views/clients/CreateAgent'));
+const AllAgents = React.lazy(() => import('./views/clients/AllAgents'));
 
 const NewAccount = React.lazy(() => import('./views/comptes/newAccount'));
 const AllAccounts = React.lazy(() => import('./views/comptes/allAccounts'))
@@ -37,7 +37,7 @@ const ButtonDropdowns = React.lazy(() => import('./views/buttons/button-dropdown
 const ButtonGroups = React.lazy(() => import('./views/buttons/button-groups/ButtonGroups'));
 const Buttons = React.lazy(() => import('./views/buttons/buttons/Buttons'));
 const Charts = React.lazy(() => import('./views/charts/Charts'));
-const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'));
+const HistoriqueDesTransferts = React.lazy(() => import('./views/dashboard/Dashboard'));
 const CoreUIIcons = React.lazy(() => import('./views/icons/coreui-icons/CoreUIIcons'));
 const Flags = React.lazy(() => import('./views/icons/flags/Flags'));
 const Brands = React.lazy(() => import('./views/icons/brands/Brands'));
@@ -52,7 +52,7 @@ const User = React.lazy(() => import('./views/users/User'));
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
-  { path: '/dashboard', name: 'Dashboard', component: Dashboard },
+  { path: '/historiqueTransferts', name: 'Historique des transferts', component: HistoriqueDesTransferts },
   { path: '/theme', name: 'Theme', component: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', component: Colors },
   { path: '/theme/typography', name: 'Typography', component: Typography },
@@ -91,11 +91,11 @@ const routes = [
   { path: '/widgets', name: 'Widgets', component: Widgets },
   { path: '/users', exact: true,  name: 'Users', component: Users },
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
-  { path: '/transfert' ,name: 'Transfert', component: Transfert},
-  { path: '/transfert-Multiple', name: 'Transfert Multiple', component: TransfertMultiple},
+  { path: '/newAgence' ,name: 'New Agence', component: NewAgence},
+  { path: '/AllAgences', name: 'All Agences', component: AllAgences},
   { path: '/historique' ,name: 'Historique', component: Historique},
-  { path: '/all-clients' ,name: 'All Clients', component: AllClients},
-  { path: '/new-client' ,name: 'New Client', component: NewClient},
+  { path: '/allAgents' ,name: 'All Agents', component: AllAgents},
+  { path: '/newAgent' ,name: 'New Agent', component: NewAgent},
   { path: '/new-account' ,name: 'New Account', component: NewAccount},
   { path: '/all-accounts' ,name: 'All Accounts', component: AllAccounts}
 ];

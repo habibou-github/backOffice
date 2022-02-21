@@ -4,51 +4,45 @@ import CIcon from '@coreui/icons-react'
 const _nav =  [
   {
     _tag: 'CSidebarNavItem',
-    name: 'Dashboard',
-    to: '/dashboard',
+    name: 'Historique des transferts',
+    to: '/historiqueTransferts',
     icon: 'cil-speedometer',
   },
   {
     _tag: 'CSidebarNavDropdown',
-    name: 'Transferts',
-    route: '/base',
+    name: 'Agence',
+    route: '/agence',
     icon: 'cil-dollar',
     _children: [
       {
         _tag: 'CSidebarNavItem',
-        name: 'Transfert',
-        to: '/transfert',
+        name: 'Nouvelle agence',
+        to: '/newAgence',
       },
       {
         _tag: 'CSidebarNavItem',
-        name: 'Transfert multiple',
-        to: '/transfert-Multiple',
-      },
-      {
-        _tag: 'CSidebarNavItem',
-        name: 'Historique',
-        to: '/historique',
-        //icon: 'cil-history',
+        name: 'Liste des agences',
+        to: '/allAgences',
       },]
   },
   {
     _tag: 'CSidebarNavDropdown',
-    name: 'Clients',
-    to: '/clients',
+    name: 'Agent',
+    to: '/agent',
     icon: 'cil-group',
     _children:[
       {
         _tag: 'CSidebarNavItem',
-        name: 'Nouveau Client',
-        to: '/new-client',
+        name: 'Nouvel agent',
+        to: '/newAgent',
       },
       {
         _tag: 'CSidebarNavItem',
-        name: 'List Des Clients',
-        to: '/all-clients',
+        name: 'Liste Des agents',
+        to: '/allAgents',
       }]
-  },
-  {
+  }
+  /*{
     _tag: 'CSidebarNavDropdown',
     name: 'Comptes',
     to: '/comptes',
@@ -65,7 +59,7 @@ const _nav =  [
         to: '/all-accounts',
       }]
   }
-  /*{
+  {
     _tag: 'CSidebarNavItem',
     name: 'Dashboard',
     to: '/dashboard',

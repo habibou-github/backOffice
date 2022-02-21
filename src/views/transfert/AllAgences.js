@@ -2,24 +2,25 @@ import { CCard, CCardBody, CCardHeader, CDataTable } from '@coreui/react'
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
-function AllClients() {
-  const [clients, updateClients] = useState([]);
+function AllAgences() {
+  const [agences, updateAgences] = useState([]);
   useEffect(() => {
-    axios.get("http://127.0.0.1:8080/client/").then((response) => {
-      updateClients(response);
+    axios.get("https://transfert-national.herokuapp.com/agence").then((response) => {
+      updateAgences(response.data);
     });
   }, []);
-      const fields = ['id','Full Name', 'GSM', 'Has Account']
+      const fields = ['Nom','Adresse', 'Ville', 'Téléphone','Active']
     return (
         <>
             <CCard>
                 <CCardHeader>
-                    <h5>Clients</h5>
+                    <h5>Agences</h5>
                 </CCardHeader>
                 <CCardBody>
                 <CDataTable
-              items={clients}
+              items={agences}
               fields={fields}
+              
               hover
               striped
               bordered
@@ -27,22 +28,35 @@ function AllClients() {
               itemsPerPage={5}
               pagination
               scopedSlots = {{
-                'Full Name':
+                'Nom':
                   (item)=>(
                     <td>
-                        {item.fullName}
+                        {item.nomAgence}
                     </td>
                   ),
-                'GSM':
+                'Téléphone':
                   (item)=>(
                     <td>
-                        {item.telephone}
+                        {item.adresseAgence}
                     </td>
                   ),
-                'Has Account':
+                'Adresse':
                   (item)=>(
                     <td>
-                        {item.hasAccount? 'True':'False'}
+                        {item.villeAgence}
+                    </td>
+                  ),
+                  'Ville':
+                  (item)=>(
+                    <td>
+                        {item.telephoneAgence}
+                    </td>
+                  ),
+                  'Active':
+                  (item)=>(
+                    <td>
+
+                        {item.active?'Active':'Non active'}
                     </td>
                   )
               }}
@@ -53,4 +67,4 @@ function AllClients() {
     )
 }
 
-export default AllClients
+export default AllAgences
